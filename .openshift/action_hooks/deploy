@@ -80,9 +80,13 @@ then
     --admin_username "$MAGENTO_ADMIN_USERNAME" \
     --admin_password "$MAGENTO_ADMIN_PASSWORD"
 
-  touch ${OPENSHIFT_DATA_DIR}.magento-sample-installed
+  echo "--> After configuration process"
 
+  touch ${OPENSHIFT_DATA_DIR}.magento-sample-installed
+    
 fi
+
+echo "----> After configuration process"
 
 if [ "$OPENSHIFT_APP_DNS" != "$OPENSHIFT_GEAR_DNS" ]
 then
